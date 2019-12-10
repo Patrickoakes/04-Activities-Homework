@@ -20,26 +20,33 @@
     </head>
 
     <body>
-        <ol>
-            <li id="test1"></li>
-            <li></li>
-            <li></li>
-            <li class="other"></li>
-            <li class="other" id="test5"></li>
-        </ol>
+        <div id="input">
+            <ol>
+                <li id="test1"></li>
+                <li></li>
+                <li></li>
+                <li class="other"></li>
+                <li class="other" id="test5"></li>
+            </ol>
 
+        </div>
+        <p>Here is the HTML</p>
+        <pre id="html-output"></pre>
 
-        <body>
+        <p>Here is the Text</p>
+        <pre id="text-output"></pre>
+
+    </body>
+
 
 </html>
-
 <script type="text/javascript">
     $(document).ready(function () {
         $("li").text("This is repeating text");
-        //$(".other").html("This text  <em>may</em> appear more than once");
         $(".other").text("This text  <em>may</em> appear more than once");
         $("#test5").html("This text does <em>NOT</em> repeat.");
-
-
+        $("#test1").text("This is a test using $");
+        $("#html-output").text($("#input").html());
+        $("#text-output").text($("#input").text());
     });
 </script>
