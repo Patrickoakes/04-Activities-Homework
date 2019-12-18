@@ -1,54 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basic jQuery Dump</title>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Basic jQuery Dump</title>
+    <!-- Added link to the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
 
-        <!-- Added link to the jQuery library -->
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    </head>
+  <body>
+    <!-- Created an empty HTML div. Note that there is no content -->
+    <div id="empty-div"></div>
 
-    <body>
+    <script type="text/javascript">
+      // Thanks to jQuery's handy $ selector ... we have a wealth of new methods for selecting and manipulating HTML.
 
-        <!-- Created an empty HTML div. Note that there is no content -->
-        <div id="empty-div"></div>
+      // Here we are using jQuery's .HTML method to instantly select and change the contents of our empty-div.
+      $("#empty-div").html("<h1>Hello friends!</h1>");
 
-        <script type="text/javascript">
+      // We can just as easily append a new line using a similarly simple .append method.
+      $("#empty-div").append("A pleasure to meet you!");
 
-            // Thanks to jQuery's handy $ selector ... we have a wealth of new methods for selecting and manipulating HTML.
+      //2.  If we needed each line to be its own div, we could just as easily create a new div.
+      var newDiv = $("<div>");
+      newDiv.text("A pleasure to meet you!");
 
-            // Here we are using jQuery's .HTML method to instantly select and change the contents of our empty-div.
-            $("#empty-div").html("<h1>Hello friends!</h1>");
+      // NOTICE THE DIFFERENCE
+      // ---------------------
+      // $("#empty-div")   <-- FIND a DOM node with the ID empty-div
+      // $("<div>")        <-- CREATE a new DIV
 
-            // We can just as easily append a new line using a similarly simple .append method.
-            $("#empty-div").append("A pleasure to meet you!");
+      // We can then  append it to the other div using the same ".append" method.
+      $("#empty-div").append(newDiv);
 
+      //3.  jQuery alternative to: document.querySelector("#empty-div").appendChild(newDiv);
+      $("#empty-div").appendChild(newDiv);
 
-            //2.  If we needed each line to be its own div, we could just as easily create a new div.
-            var newDiv = $("<div>");
-            newDiv.text("A pleasure to meet you!");
-
-            // NOTICE THE DIFFERENCE
-            // ---------------------
-            // $("#empty-div")   <-- FIND a DOM node with the ID empty-div
-            // $("<div>")        <-- CREATE a new DIV
-
-            // We can then  append it to the other div using the same ".append" method.
-            $("#empty-div").append(newDiv);
-
-            //3.  jQuery alternative to: document.querySelector("#empty-div").appendChild(newDiv);
-            $("#empty-div").append(newDiv);
-
-            // If we need to apply some CSS, we can quickly do so, using the jQuery ".attr" method.
-            newDiv.attr("class", "fancy");
-
-
-
-
-        </script>
-
-    </body>
-
+      // If we need to apply some CSS, we can quickly do so, using the jQuery ".attr" method.
+      newDiv.attr("class", "fancy");
+    </script>
+  </body>
 </html>
