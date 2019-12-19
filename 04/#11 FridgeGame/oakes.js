@@ -38,6 +38,7 @@ $(document).ready(function() {
 
   for (i = 0; i < letter.length; i++) {
     var letterBtn = $("<button>");
+    var letBut = $("<button class = "letter-button" "letter" "letter-button-color">);
   }
 
   // Inside the loop...
