@@ -36,7 +36,9 @@ $(document).ready(function() {
 
   // 1. Create a for-loop to iterate through the letters array.
 
-  for (i =0, i < letter.length, i++) {}
+  for (i = 0; i < letter.length; i++) {
+    var letterBtn = $("<button>");
+  }
 
   // Inside the loop...
 
