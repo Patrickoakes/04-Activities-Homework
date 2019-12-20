@@ -66,11 +66,12 @@
            
  
          
-        $("#button-1").on("click", function() {
-           var numClick1 = 1;
+        $(".btn-choice").on("click", function() {
+          var numClick = $(this).val();
+          //  var numClick1 = 1;
             var random = Math.floor(Math.random() * 4 + 1);
             $("#computer-pick").text(random);
-           if (numClick1 === random){
+           if (parseInt(numClick) === random){
                $("#result").text("YOU GUESSED CORRECTLY!!!")
            }else {
     $("#result").text("YOU GUESSED INCORRECTLY")
@@ -79,41 +80,41 @@
 });
 
 
-$("#button-2").on("click", function() {
-            var random = Math.floor(Math.random() * 4 + 1);
-            var numClick1 = 2;
-             $("#computer-pick").text(random);
-             if (numClick1 === random){
-               $("#result").text("YOU GUESSED CORRECTLY!!!")
-           }else {
-    $("#result").text("YOU GUESSED INCORRECTLY")
-    }; 
-             });
+// $("#button-2").on("click", function() {
+//             var random = Math.floor(Math.random() * 4 + 1);
+//             var numClick1 = 2;
+//              $("#computer-pick").text(random);
+//              if (numClick1 === random){
+//                $("#result").text("YOU GUESSED CORRECTLY!!!")
+//            }else {
+//     $("#result").text("YOU GUESSED INCORRECTLY")
+//     }; 
+//              });
            
             
-            $("#button-3").on("click", function() {
-              var numClick1 = 3;
-              var random = Math.floor(Math.random() * 4 + 1);
-$("#computer-pick").text(random);
-if (numClick1 === random){
-               $("#result").text("YOU GUESSED CORRECTLY!!!")
-           }else {
-    $("#result").text("YOU GUESSED INCORRECTLY")
-    }; 
-            });
+//             $("#button-3").on("click", function() {
+//               var numClick1 = 3;
+//               var random = Math.floor(Math.random() * 4 + 1);
+// $("#computer-pick").text(random);
+// if (numClick1 === random){
+//                $("#result").text("YOU GUESSED CORRECTLY!!!")
+//            }else {
+//     $("#result").text("YOU GUESSED INCORRECTLY")
+//     }; 
+//             });
             
             
             
-            $("#button-4").on("click", function() {
-      var random = Math.floor(Math.random() * 4 + 1);
-      var numClick1 = 4;
-$("#computer-pick").text(random);
-if (numClick1 === random){
-               $("#result").text("YOU GUESSED CORRECTLY!!!")
-           }else {
-    $("#result").text("YOU GUESSED INCORRECTLY")
-    }; 
-}); 
+//             $("#button-4").on("click", function() {
+//       var random = Math.floor(Math.random() * 4 + 1);
+//       var numClick1 = 4;
+// $("#computer-pick").text(random);
+// if (numClick1 === random){
+//                $("#result").text("YOU GUESSED CORRECTLY!!!")
+//            }else {
+//     $("#result").text("YOU GUESSED INCORRECTLY")
+//     }; 
+// }); 
 
 
 
