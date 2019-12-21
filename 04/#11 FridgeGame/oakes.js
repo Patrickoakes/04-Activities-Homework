@@ -117,5 +117,13 @@ $(document).ready(function() {
 
   // Inside the on-click event...
 
+  /// MINE >     $("#clear").downKey(button) {
+
+  $("#clear").on("click", function() {
+    /// MINE >        $("empty").$("#display")
+
+    $("#display").empty();
+  });
+
   // 13. Use the jQuery "empty()" method to clear the contents of the "#display" div.
 });
